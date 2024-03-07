@@ -45,6 +45,7 @@
 </template>
 
 <script setup>
+import { ref, onBeforeUnmount } from 'vue';
 import { useEditor, EditorContent, BubbleMenu, Extension } from '@tiptap/vue-3';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
@@ -53,7 +54,6 @@ import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
 import TableRow from '@tiptap/extension-table-row';
 import Image from '@tiptap/extension-image';
-// import '@/assets/css/article.css';
 
 const TextStyles = Extension.create({
   addGlobalAttributes() {

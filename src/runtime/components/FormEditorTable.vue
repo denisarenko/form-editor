@@ -17,6 +17,7 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 const props = defineProps({ editor: Object });
 
 const toolbar = ref([

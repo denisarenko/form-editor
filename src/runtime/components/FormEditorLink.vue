@@ -23,6 +23,7 @@
 </template>
 
 <script setup>
+import { ref, watchEffect } from 'vue';
 const props = defineProps({ editor: Object });
 
 const linkHref = ref();

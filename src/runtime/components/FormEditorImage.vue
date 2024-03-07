@@ -37,6 +37,7 @@
 </template>
 
 <script setup>
+import { ref, watch, watchEffect } from 'vue';
 const props = defineProps({ editor: Object });
 
 const imageFile = defineModel();

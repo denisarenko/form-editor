@@ -2,9 +2,12 @@ import {defineNuxtModule, createResolver, addComponentsDir, installModule} from 
 
 export interface ModuleOptions {}
 
+import { name, version } from '../package.json'
+
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'my-module',
+    name,
+    version,
     configKey: 'myModule'
   },
   defaults: {},
