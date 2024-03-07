@@ -1,6 +1,6 @@
 {
-  "name": "form-editor",
-  "version": "0.5.0",
+  "name": "dope-form-editor",
+  "version": "0.5.5",
   "description": "Nuxt Rich Editor Module based on Tiptap",
   "repository": "denisarenko/form-editor",
   "license": "MIT",
@@ -38,15 +38,15 @@
     "@tiptap/extension-table-row": "^2.2.4",
     "@tiptap/starter-kit": "^2.2.4",
     "@tiptap/vue-3": "^2.2.4",
-    "vue": "latest"
+    "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@types/node": "^20.11.22",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.10.3",
     "@nuxt/test-utils": "^3.11.0",
+    "@types/node": "^20.11.22",
     "changelogen": "^0.5.5",
     "eslint": "^8.57.0",
     "nuxt": "^3.10.3",
