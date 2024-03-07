@@ -1,0 +1,96 @@
+.article-body, .tiptap {
+    @apply font-normal space-y-4 outline-0;
+
+    ol {
+        @apply list-decimal pl-5 space-y-2;
+    }
+
+    ul {
+        @apply list-disc pl-5 space-y-2;
+    }
+
+    h2 {
+        @apply text-4xl;
+    }
+
+    h3 {
+        @apply text-3xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
+    h2, h3, h4 {
+        @apply font-bold leading-[1.3];
+    }
+
+    blockquote {
+        @apply relative p-10 max-w-3xl mx-auto;
+        @apply rounded-3xl text-center shadow-lg;
+        @apply before:content-[open-quote] before:left-8 before:top-10;
+        @apply after:content-[close-quote] after:right-8 after:-bottom-7;
+
+        &:before, &:after {
+            @apply absolute text-9xl leading-[0] text-orange-500;
+        }
+    }
+
+    table {
+        @apply w-full rounded-xl border-separate border-spacing-0;
+
+        th, td {
+            @apply px-5 py-4 text-left;
+            @apply border-b border-r border-gray-300;
+            @apply first:border-l;
+        }
+
+        tr:first-child td {
+            @apply border-t;
+            @apply first:rounded-tl-xl last:rounded-tr-xl;
+        }
+
+        tr:last-child td {
+            @apply first:rounded-bl-xl last:rounded-br-xl;
+        }
+
+        &.special-table tr:first-child td {
+            @apply bg-orange-500 text-white border-white/50;
+        }
+    }
+
+    figure {
+        @apply m-0;
+
+        img {
+            @apply m-0 w-full;
+        }
+
+        figcaption {
+            @apply text-slate-500 text-center text-sm px-5 bg-none border-none mt-2;
+            @apply focus:bg-none focus:border-none;
+        }
+    }
+
+    a {
+        @apply text-orange-500 border-b border-transparent hover:border-current duration-200;
+    }
+}
+
+.tiptap {
+    td, th {
+        @apply relative;
+    }
+
+    .selectedCell:after {
+        @apply bg-slate-50 inset-0 pointer-events-none absolute content-[''] -z-[1];
+    }
+
+    .column-resize-handle {
+        @apply absolute -inset-y-px -right-0.5 w-1 bg-blue-500/50 pointer-events-none z-[1];
+    }
+}
+
+.resize-cursor {
+    @apply cursor-col-resize
+}
